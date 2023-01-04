@@ -13,7 +13,7 @@ Não é necessário instalação, acesse por este [link](https://marcosvieira31.
 
 ## Aprendizados
 
-Com esse projeto foi possivel praticar habilidades com HTML e CSS, além de evoluir o conhecimentos sobre Javascript e manipulação da DOM.
+Com esse projeto foi possivel praticar habilidades com HTML e CSS, além de evoluir o conhecimentos sobre Javascript e manipulação do DOM.
 ## Stack utilizada
 
 **Front-end:** HTML, CSS e Javascript
