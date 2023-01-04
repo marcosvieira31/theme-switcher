@@ -1,0 +1,159 @@
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+
+    --label-border-light: #D6D6E1;
+    --label-fill-light: #F1F1F1;
+
+
+	--label-border-dark: #9396A3;
+    --label-fill-dark: #4A4A56;
+
+    --toggle-border-dark: #f1f1f1;
+    --toggle-fill-dark: #4A4A56;
+
+    --toggle-fill-light: #FCEB61;
+    --toggle-border-light: #FFC262;
+}
+
+*{
+    box-sizing: border-box;
+    font: 1rem Poppins, sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: var(--light);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1{
+    margin: 10rem auto 1rem;
+    text-align: center;
+}
+
+h1, span{
+    font-size: 3rem;
+}
+
+img{
+    width: 4.5rem;
+}
+
+#toggle-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 14rem;
+    height: 6.5rem;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5rem auto auto;
+
+    background-color: var(--light);
+    border-radius: 5rem;
+    border: 0.2rem solid var(--label-border-light);
+}
+
+#toggle{
+    position: absolute;
+    left: 0.5rem;
+    background-color: var(--toggle-fill-light);
+    width: 5rem;
+    height: 5rem;
+    border: 0.5rem solid var(--toggle-border-light);
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.toggleDark{
+    animation: ToggleDark 0.5s forwards ease;
+}
+
+.bodyDark{
+    animation: BodyDark 0.5s forwards ease;
+}
+
+.toggleLight:not(.preload){
+    animation: ToggleLight 0.5s forwards ease;
+}
+
+.bodyLight:not(.preload){
+    animation: BodyLight 0.5s forwards ease;
+}
+
+.toggleContainerDark{
+    animation: ToggleContainerDark 0.5s forwards ease;
+}
+
+.toggleContainerLight:not(.preload){
+    animation: ToggleContainerLight 0.5s forwards ease;
+}
+
+@keyframes ToggleDark{
+    from{
+        left: 0.5rem;
+    }
+
+    to{
+        left: 8rem;
+        background-color: var(--toggle-fill-dark);
+        border-color: var(--toggle-border-dark);
+    }
+}
+
+@keyframes ToggleContainerDark{
+    from{
+        background-color: var(--label-fill-light);
+        border-color: var(--label-border-light);
+    }
+
+    to{
+        background-color: var(--label-fill-dark);
+        border-color: var(--label-border-dark);
+    }
+}
+
+@keyframes ToggleContainerLight{
+    from{
+        background-color: var(--label-fill-dark);
+        border-color: var(--label-border-dark);
+    }
+
+    to{
+        background-color: var(--label-fill-light);
+        border-color: var(--label-border-light);
+    }
+}
+
+@keyframes BodyDark{
+    from{
+        background-color: var(--light);
+    }
+
+    to{
+        background-color: var(--dark);
+    }
+}
+
+@keyframes ToggleLight{
+    from{
+        left: 8rem;
+    }
+
+    to{
+        left: 0.5rem;
+    }
+}
+
+@keyframes BodyLight{
+    from{
+        background-color: var(--dark);
+    }
+
+    to{
+        background-color: var(--light);
+    }
+}
